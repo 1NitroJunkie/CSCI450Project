@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regent STEM Summer Camp</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+        html, body {
+            min-height: 100%;
+        }
+
+        body {
+            background: url("https://th.bing.com/th/id/R.cd3f52d5514a341c4b7e627c23a142f8?rik=jK3r7YcrqBQujg&pid=ImgRaw&r=0") no-repeat center;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        .main-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .left-part {
+            text-align: center;
+            color: #eee;
+            padding: 25px;
+            max-width: 400px;
+        }
+
+        .fa-graduation-cap {
+            font-size: 72px;
+            color: #26a9e0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+        }
+
+        .btn-item {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            border: none;
+            background: #26a9e0;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-item:hover {
+            background: #85d6de;
+        }
+
+        form {
+            margin-top: 50px;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #eee;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input::placeholder {
+            color: #eee;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #26a9e0;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #85d6de;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-block">
+        <div class="left-part">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Welcome to Regent STEM Summer Camp</h1>
+            <p>Unlock the wonders of science, technology, engineering, and math!</p>
+            <div class="btn-group">
+                <a class="btn-item" href="#">Learn More</a>
+                <a class="btn-item" href="#">Register Now</a>
+            </div>
+        </div>
+        <form action="/" class="registration-form">
+            <h2>Registration Form</h2>
+            <label for="parentsname">Parent's Name:</label>
+            <input type="text" id="parentsname" name="parentsname" placeholder="Parent's Name">
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Address">
+
+            <label for="contactphonenumber">Contact Phone Number:</label>
+            <input type="text" id="contactphonenumber" name="contactphonenumber" placeholder="Contact Phone Number">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+
+            <label for="participantname">Participant's Name:</label>
+            <input type="text" id="participantname" name="participantname" placeholder="Participant's Name">
+
+            <label for="participantage">Participant's Age:</label>
+            <input type="number" id="participantage" name="participantage" placeholder="Participant's Age">
+
+            <label for="participantgrade">Participant's Grade:</label>
+            <input type="number" id="participantgrade" name="participantgrade" placeholder="Participant's Grade">
+
+            <label for="campprogramname">Camp Program Name:</label>
+            <input type="text" id="campprogramname" name="campprogramname" placeholder="Camp Program Name">
+
+            <label for="statusofregistration">Status of Registration:</label>
+            <input type="text" id="statusofregistration" name="statusofregistration" placeholder="Status of Registration">
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
