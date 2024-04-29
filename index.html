@@ -13,7 +13,7 @@
 <body>
 	<div class="registration-form">
 		<h1>Registration Form</h1>
-		<form id="contactForm" name="contact" netlify>
+		<form action="submit_form.php" id="contactForm" name="contact" method="POST">
 			<p>Parents Name</p>
 			<input type="text" name="parentsname" placeholder="Parents Name">
 			<p>Address:</p>
@@ -38,16 +38,17 @@
 		</form>
 	</div>
 	<script>
-	    document.getElementById('contactForm').onsubmit = function() {
-        // Display the alert to the user
-        alert('Registration Successful! Thank you for registering. We have received your information.');
-        
-        // Reset the form fields
-        this.reset();
+	    document.getElementById('contactForm').onsubmit = function()
+		{
+			// Display the alert to the user
+			alert('Registration Successful! Thank you for registering. We have received your information.');
+			
+			// Reset the form fields
+			this.reset();
 
-        // Prevent the default form submission which refreshes the page
-        return false;
-    };
+			// Prevent the default form submission which refreshes the page
+			return false;
+    	};
 	</script>
 </body>
 </html>
