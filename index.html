@@ -126,10 +126,6 @@
             <i class="fas fa-graduation-cap"></i>
             <h1>Welcome to Regent STEM Summer Camp</h1>
             <p>Unlock the wonders of science, technology, engineering, and math!</p>
-            <div class="btn-group">
-                <a class="btn-item" href="#">Learn More</a>
-                <a class="btn-item" href="#">Register Now</a>
-            </div>
         </div>
         <form action="/" class="registration-form">
             <h2>Registration Form</h2>
@@ -163,5 +159,18 @@
             <button type="submit">Register</button>
         </form>
     </div>
+	<script>
+	    document.getElementById('registration-form').onsubmit = function()
+		{
+			// Display the alert to the user
+			alert('Registration Successful! Thank you for registering. We have received your information.');
+			
+			// Reset the form fields
+			this.reset();
+
+			// Prevent the default form submission which refreshes the page
+			return false;
+    	};
+	</script>
 </body>
 </html>
