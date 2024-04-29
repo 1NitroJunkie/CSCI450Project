@@ -38,10 +38,16 @@
 		</form>
 	</div>
 	<script>
-	    document.getElementById('contactForm').onsubmit = function() {
-	        alert('Registration Successful! Thank you for registering. We have received your information.');
-	        return false; // Prevent page refresh
-	    };
+	    document.getElementById('registrationForm').onsubmit = function() {
+        // Display the alert to the user
+        alert('Registration Successful! Thank you for registering. We have received your information.');
+        
+        // Reset the form fields
+        this.reset();
+
+        // Prevent the default form submission which refreshes the page
+        return false;
+    };
 	</script>
 </body>
 </html>
