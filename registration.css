@@ -4,9 +4,14 @@
 	font-family: sans-serif;
 }
 
-body {
+body
+{
 	background: url('https://tryengineering.org/wp-content/uploads/bigstock-Science-Technology-Engineeri-268236289.jpg') no-repeat center center fixed;
 	background-size: cover;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, Arial, sans-serif;
 }
 
 .registration-form {
