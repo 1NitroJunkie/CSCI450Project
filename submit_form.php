@@ -32,7 +32,7 @@ $participantage = $_POST['participantage'];
 $participantgrade = $_POST['participantgrade'];
 $campprogramname = $_POST['campprogramname'];
 $statusofregistration = $_POST['statusofregistration'];
-$dateofregistration = $_POST['dateofregistration'];
+$dateofregistration = date("Y-m-d H:i:s");
 
 $stmt->execute();
 
