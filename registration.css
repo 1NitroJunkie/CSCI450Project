@@ -5,7 +5,7 @@
 }
 
 body {
-	background: url('https://tryengineering.org/wp-content/uploads/bigstock-Science-Technology-Engineeri-268236289.jpg') no-repeat;
+	background: url('https://tryengineering.org/wp-content/uploads/bigstock-Science-Technology-Engineeri-268236289.jpg') no-repeat center center fixed;
 	background-size: cover;
 	color: #fff;
 }
@@ -15,7 +15,7 @@ body {
 	top:50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 400px;
+	width: 1000px;
 }
 
 .registration-form h1 {
