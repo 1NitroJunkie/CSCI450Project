@@ -202,7 +202,7 @@
             <input type="text" id="address" name="address" placeholder="Address">
 
             <label for="contactPhoneNumber">Contact Phone Number:</label>
-            <input type="text" id="contactPhoneNumber" placeholder="(###) ###-####">
+            <input type="text" id="contactPhoneNumber" name="contactPhoneNumber" placeholder="(###) ###-####">
             <div id="error-message" class="error"></div>
 
             <label for="email">Email:</label>
@@ -227,17 +227,10 @@
         </form>
     </div>
     <script>
-        document.getElementById('contactForm').onsubmit = function()
-        {
-            // Display the alert to the user
-            alert('Registration Successful! Thank you for registering. We have received your information.');
-            
-            // Reset the form fields
-            this.reset();
-
-            // Prevent the default form submission which refreshes the page
-            return false;
-        };
+        document.getElementById('contactForm').onsubmit = function(event) {
+    alert('Registration Successful! Thank you for registering. We have received your information.');
+    // Now allow the form to submit
+};
     </script>
 </body>
 </html>
