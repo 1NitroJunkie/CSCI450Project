@@ -227,10 +227,25 @@
         </form>
     </div>
     <script>
-        document.getElementById('contactForm').onsubmit = function(event) {
-    alert('Registration Successful! Thank you for registering. We have received your information.');
-    // Now allow the form to submit
-};
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Gathering form data
+        var formData = new FormData(this);
+
+        // Sending form data using fetch
+        fetch('submit_form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text()) // Assuming the server responds with text
+        .then(text => {
+            alert('Registration Successful! Thank you for registering. We have received your information.');
+            // Clear the form after the alert
+            document.getElementById('contactForm').reset();
+        })
+        .catch(error => console.error('Error:', error)); // Log errors if any
+        });
     </script>
 </body>
 </html>
