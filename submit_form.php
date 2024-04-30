@@ -16,7 +16,7 @@ if ($con->connect_error) {
 }
 
 // Prepare and bind
-$stmt = $con->prepare("INSERT INTO registration (parentsname, address, contactPhoneNumber, email, participantname, participantage, participantgrade, campprogramname, statusofregistration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $con->prepare("INSERT INTO registrations (parentsname, address, contactPhoneNumber, email, participantname, participantage, participantgrade, campprogramname, statusofregistration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssssiiss", $parentsname, $address, $contactPhoneNumber, $email, $participantname, $participantage, $participantgrade, $campprogramname, $statusofregistration);
 
 // Set parameters from POST data
