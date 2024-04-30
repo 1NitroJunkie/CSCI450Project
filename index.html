@@ -227,29 +227,6 @@
         </form>
     </div>
     <script>
-        const phoneNumberInput = document.getElementById('phone');
-
-        phoneNumberInput.addEventListener('input', function(e) {
-            let input = e.target.value.replace(/\D/g, ''); // Remove all non-digit characters
-            let formattedInput = '';
-
-            // Check the length of input to format accordingly
-            if (input.length > 0) {
-                formattedInput += '(' + input.substring(0, 3);
-            }
-            if (input.length >= 3) {
-                formattedInput += ') ';
-                formattedInput += input.substring(3, 6);
-            }
-            if (input.length >= 6) {
-                formattedInput += '-';
-                formattedInput += input.substring(6, 10);
-            }
-
-            e.target.value = formattedInput; // Set the formatted value back to the input
-        });
-    </script>
-    <script>
         document.getElementById('contactForm').onsubmit = function()
         {
             // Display the alert to the user

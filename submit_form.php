@@ -1,8 +1,8 @@
 <?php
-$servername = "stem-reg";
-$username = "josewh2";
-$password = "TrustNo1v1";
-$dbname = "camp_registration";
+$servername = "den1.mysql3.gear.host";
+$username = "campregistration";
+$password = "Cc2qq3G5!!Uf";
+$dbname = "campregistration";
 
 // Include PHPMailer classes
 use PHPMailer\PHPMailer\PHPMailer;
