@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Regent STEM Summer Camp (Group D)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> STEM Summer Camp Registration </title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <style>
+        /* Styles for the header */
+        header {
+            background-color: black; /* Solid black background */
+            color: white; /* White text color */
+            text-align: center; /* Center-align the text */
+            width: 100%; /* Ensure it covers the full width */
+            position: fixed; /* Fix position to the top */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Keeps it on top of other content */
+        }
+
+        body {
+            padding-top: 70px; /* Add padding to top of the body to avoid hiding content behind the fixed header */
+        }
+    </style>
 </head>
 <body>
     <style>
@@ -41,7 +61,13 @@
             color: #26a9e0;
         }
 
-        h1 {
+        h1
+        {
+            color: #fff;
+            font-size: 1em;
+        }
+        
+        h2 {
             font-size: 2.5em;
             margin-bottom: 10px;
         }
@@ -104,7 +130,7 @@
         }
 
         button {
-            width: 50%;
+            width: calc(100% - 20px);
             padding: 10px 20px;
             margin-top: 20px;
             border-radius: 5px;
@@ -121,14 +147,17 @@
             background: #85d6de;
         }
     </style>
+    <header>
+        <h1> Regent University CSCI 450 Spring 2024 Group D STEM Summer Camp Registration and Tracking Project </h1>
+    </header>
     <div class="main-block">
         <div class="left-part">
             <i class="fas fa-graduation-cap"></i>
-            <h1>Welcome to Regent STEM Summer Camp</h1>
+            <h2>Welcome to Regent STEM Summer Camp</h2>
             <p>Unlock the wonders of science, technology, engineering, and math!</p>
         </div>
-        <form action="/" class="registration-form">
-            <h2>Registration Form</h2>
+        <form action="submit_form.php" id="contactForm" name="contact" method="POST">
+            <h3>Registration Form</h3>
             <label for="parentsname">Parent's Name:</label>
             <input type="text" id="parentsname" name="parentsname" placeholder="Parent's Name">
 
@@ -156,23 +185,21 @@
             <label for="statusofregistration">Status of Registration:</label>
             <input type="text" id="statusofregistration" name="statusofregistration" placeholder="Status of Registration">
 
-            <div align="center">
-                <button type="submit">Register</button>
-            </div>
+            <button type="submit">Register</button>
         </form>
     </div>
-	<script>
-	    document.getElementById('registration-form').onsubmit = function()
-		{
-			// Display the alert to the user
-			alert('Registration Successful! Thank you for registering. We have received your information.');
-			
-			// Reset the form fields
-			this.reset();
+    <script>
+        document.getElementById('contactForm').onsubmit = function()
+        {
+            // Display the alert to the user
+            alert('Registration Successful! Thank you for registering. We have received your information.');
+            
+            // Reset the form fields
+            this.reset();
 
-			// Prevent the default form submission which refreshes the page
-			return false;
-    	};
-	</script>
+            // Prevent the default form submission which refreshes the page
+            return false;
+        };
+    </script>
 </body>
 </html>
