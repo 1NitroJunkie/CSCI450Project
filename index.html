@@ -230,21 +230,22 @@
         document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
 
-        // Gathering form data
         var formData = new FormData(this);
 
-        // Sending form data using fetch
         fetch('submit_form.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.text()) // Assuming the server responds with text
+        .then(response => response.text())
         .then(text => {
+            console.log(text); // Log server response for debugging
             alert('Registration Successful! Thank you for registering. We have received your information.');
-            // Clear the form after the alert
-            document.getElementById('contactForm').reset();
+            document.getElementById('contactForm').reset(); // Clear the form after the alert
         })
-        .catch(error => console.error('Error:', error)); // Log errors if any
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Registration failed! Please try again.');
+        });
         });
     </script>
 </body>
