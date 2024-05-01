@@ -2,7 +2,8 @@
 
 require 'vendor/autoload.php';  // This path assumes that this script is in the root folder of your project
 
-use MailTrip\Mail;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 function sendEmailNotification($recipientEmail, $subject, $body) {
     $phpmailer = new PHPMailer();
@@ -60,6 +61,7 @@ $participantage = $_POST['participantage'];
 $participantgrade = $_POST['participantgrade'];
 $campprogramname = $_POST['campprogramname'];
 $statusofregistration = $_POST['statusofregistration'];
+$dateofregistration = date("Y-m-d H:i:s");  // Current date and time
 
 // Execute the prepared statement
 if ($stmt->execute()) {
