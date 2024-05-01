@@ -76,7 +76,7 @@ if ($stmt->execute()) {
   }
 } else {
   echo "Error: " . $stmt->error;
-
+};
 // Close statement and connection
 $stmt->close();
 $con->close();
