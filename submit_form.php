@@ -1,6 +1,6 @@
 <?php
 
-//require 'vendor/autoload.php';  // This path assumes that this script is in the root folder of your project
+//require 'vendor/autoload.php';
 
 //use PHPMailer\PHPMailer\PHPMailer;
 //use PHPMailer\PHPMailer\Exception;
@@ -36,7 +36,7 @@ $host = "den1.mysql2.gear.host";
 $port = 3306;
 $socket = "";
 $user = "campreg";
-$password = "Wi4v-0s3FC~f"; // Make sure to put your actual password here
+$password = "Wi4v-0s3FC~f";
 $dbname = "campreg";
 
 // Create connection
